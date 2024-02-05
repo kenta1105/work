@@ -35,8 +35,9 @@ void processPointClouds(pcl::visualization::PCLVisualizer::Ptr& viewer)
     pcl::PointCloud<pcl::PointXYZI>::Ptr filteredCloud = pointProcessor.filterCloud(inputCloud, sampleResolution, cropArea); // 点群の削除
     renderPointCloud(viewer, filteredCloud, "filteredCloud"); // フィルタリングした点群データの表示
 
+    // 物標の向きを考慮したBoxの表示
     Fitting fit;
-    BoxQ box = fit,fitting(cluster);
+    BoxQ box = fit.fitting(cluster);
     renderBox(viewer, box, clusterID);
     ++clusterId;
 
