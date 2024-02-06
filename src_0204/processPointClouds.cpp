@@ -1,6 +1,7 @@
 // PCL lib Functions for processing point clouds 
 
 #include "processPointClouds.h"
+#include "quiz/cluster/euclidean_cluster.h"
 
 
 //constructor:

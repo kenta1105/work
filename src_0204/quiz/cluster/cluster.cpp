@@ -6,6 +6,7 @@
 #include <chrono>
 #include <string>
 #include "kdtree.h"
+#include "euclidean_cluster.h"
 
 // Arguments:
 // window is the region to draw box around
